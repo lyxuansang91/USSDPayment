@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 /**
  * Created by sanglx on 9/8/17.
@@ -16,6 +17,12 @@ public class USSDPaymentFirebaseInstanceIDService extends FirebaseInstanceIdServ
     public void onTokenRefresh() {
         String refreshToken = FirebaseInstanceId.getInstance().getToken();
         sendRegistrationToServer(refreshToken);
+        subscribeTopic(this.getApplicationContext().getPackageName());
+    }
+
+    private void subscribeTopic(String pkgName) {
+        Log.d(TAG, "package name:" + pkgName);
+        FirebaseMessaging.getInstance().subscribeToTopic(pkgName);
     }
 
     private void sendRegistrationToServer(String refreshToken) {
