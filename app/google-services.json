@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "524364007375",
+    "firebase_url": "https://ussdpayment.firebaseio.com",
+    "project_id": "ussdpayment",
+    "storage_bucket": "ussdpayment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524364007375:android:916eced2e2ebc513",
+        "android_client_info": {
+          "package_name": "com.kingigame.ussdpayment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524364007375-hthnr1he4v4ebhvki1koqa1hi0p816bu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBSU7SVLeXv0fPCTa1Bo7xaNmgWgwDHug"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
