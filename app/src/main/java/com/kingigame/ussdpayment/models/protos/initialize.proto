@@ -1,0 +1,35 @@
+option java_package = "com.kingigame.ussdpayment.models";
+
+message BINInitializeRequest {
+	required string cp = 1;
+	required string appVersion = 2;
+	optional string deviceId = 3;
+	optional string deviceInfo = 4;
+	optional string country = 5;
+	optional string language = 6;
+	optional string pakageName = 7;
+	optional bool liteVersion = 8;
+}
+
+message BINInitializeResponse {
+    required bool responseCode = 1;
+    optional string message = 2;
+	optional string currentAppVersion = 3;
+	optional string downloadUrl = 4;
+	optional string cashCurrency = 5;
+	optional string goldCurrency = 6;
+	optional bool forceUpdate = 7;
+	optional bool enableQuickPlay = 8;
+	optional bool enableCashSystem = 9;
+	optional bool enablePurchaseCash = 10;//bật/ tắt chức năng nạp thẻ
+	optional bool enableTopup = 11;//bật tắt chức năng đổi thưởng
+	optional bool enableCashToGold = 12;//bật tắt chức năng đổi xu sang ken
+	optional bool enableCashTransfer = 13;//bật tắt chức năng chuyển xu
+	optional bool enableGiftCode = 14;//bật tắt chức năng quà tặng
+	optional int32 cashToGoldRatio = 15;//tỉ lệ đổi xu sang ken
+	repeated string hotlines = 16;//số điện thoại hỗ trợ
+	optional string fanpageUrl = 17;//link fanpage
+	optional string websiteUrl = 18;
+	repeated int32 enableGameIds = 19;//danh sách game id active
+	optional string resetPwSmsSyntax = 20;
+}

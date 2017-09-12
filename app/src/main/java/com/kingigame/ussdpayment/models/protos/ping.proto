@@ -1,0 +1,15 @@
+option java_package = "com.kingigame.ussdpayment.models";
+
+//Ping
+
+message BINPingRequest {
+	optional int32 disconectTime = 1;
+}
+
+message BINPingResponse {
+    required bool responseCode = 1;
+    optional string message = 2;
+	optional bool disconnect = 3;
+}
+
+//End Ping
